@@ -423,7 +423,8 @@ Moreover, it can be shown that
 
 \subsection{Partitions by orbits}
 
-Assume that $G$ acts on $X.$ Define a relation on $X$ by
+Assume that $G$ acts on $X.$ If the action is $\varphi,$ then let us write $\varphi(g, x)$ as simply $gx.$ \\
+Define a relation on $X$ by
 \[x \sim y \text{ if } \exists g \in G: y = gx.\]
 Then, $\sim$ is an equivalence relation on $X.$\\
 For $x \in X,$ $[x]$ is the equivalence class of $x.$\\
@@ -481,7 +482,7 @@ Then, $G/H = \{H, (13)H, (23H)\} = \{a_1, a_2, a_3\}$ where $a_1 = \{1, (12)\}, 
 Let $s = (13)H.$ Then, $O_s = G/H.$ (We had noted the action is transitive before as well.)\\
 $G_s = (13)H(13)^{-1} = \{1, (23)\}.$\\
 Let us observe one more thing:\\
-For a fixed $g \in S_3,$ define $m_g : G/H \to G/H$ as left multiplication by $g.$\\
+For a fixed $g \in S_3,$ define $m_g : G \to G/H$ as left multiplication by $g.$\\
 Let $g = (12).$ Under this map, we see the following
 \begin{align*}
 	a_1 & \mapsto a_1\\
@@ -754,7 +755,7 @@ $n_p(G) := |\Syl_p(G)|.$
 	\end{proof}
 	
 	\item If $\ord(G) = p,$ then $G$ is abelian and simple. (There are no nontrivial subgroups to begin with.)
-	\item If $\ord(G) \neq$ prime and $G$ is abelian, then $G$ is not simple.\\
+	\item If $\ord(G) \neq$ prime and $G$ is abelian, then $G$ is not simple.
 	\begin{proof}
 	Using (1), we get that $G$ has a proper subgroup. As $G$ is abelian, this is normal.
 	\end{proof}
