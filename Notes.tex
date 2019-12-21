@@ -478,11 +478,11 @@ We take $H \in G/H,$ then we get that $O_H = G/H.$ Thus, this action is transiti
 Also, $G_H = H.$ Thus, by our previous result, we get that $G_{aH} = aHa^{-1}.$\\~\\
 \textbf{Example}\\
 Let $G = S_3$ and $H = \langle  (12)\rangle.$ That is, $H = \{1, (12)\}.$\\
-Then, $G/H = \{H, (13)H, (23H)\} = \{a_1, a_2, a_3\}$ where $a_1 = \{1, (12)\}, \; a_2 = \{(13), (123)\}$ and $a_3 = \{(23), (132)\}.$\\
+Then, $G/H = \{H, (13)H, (23)H\} = \{a_1, a_2, a_3\}$ where $a_1 = \{1, (12)\}, \; a_2 = \{(13), (123)\}$ and $a_3 = \{(23), (132)\}.$\\
 Let $s = (13)H.$ Then, $O_s = G/H.$ (We had noted the action is transitive before as well.)\\
 $G_s = (13)H(13)^{-1} = \{1, (23)\}.$\\
 Let us observe one more thing:\\
-For a fixed $g \in S_3,$ define $m_g : G \to G/H$ as left multiplication by $g.$\\
+For a fixed $g \in S_3,$ define $m_g : G/H \to G/H$ as left multiplication by $g.$\\
 Let $g = (12).$ Under this map, we see the following
 \begin{align*}
 	a_1 & \mapsto a_1\\
@@ -571,7 +571,7 @@ Given $x \in G,$ we get that $O_x = [x] \longleftarrow$ conjugacy class of $x$ i
 Moreover, the stabiliser $G_x = \{g \in G : xg = gx\}.$ This called the centraliser of $x.$\\
 Also, we have the homomorphism $m : G \to \Aut G$ whose kernel is given by $\ker m = \displaystyle\bigcap_{x \in G}G_x = Z(G) \longleftarrow$ center of $G.$\\~\\
 %\\
-$x \in Z(G) \iff Z(x) = G \iff O_x = C(x) = \{x\}.$.\\
+$x \in Z(G) \iff Z(x) = G \iff O_x = C(x) = \{x\}.$\\
 In general, $x \notin Z(G) \implies Z(G) \subsetneq Z(x)$ and $x \in Z(G) \implies Z(x) = G.$
 
 \section{Class Equation}
@@ -580,21 +580,21 @@ $G$ is the disjoint union of orbits, that is, conjugacy classes.\\
 In general, $G = \displaystyle\bigsqcup_{x \in S \subset G}C(x)$ which gives us that $|G| = \displaystyle\sum_{x\in S\subset G}|C(x)|.$\\
 The above is known as the class equation.\\
 ($S$ is a subset of $G$ with the property that given any $x\in G,$ there is exactly one member $|S\cap C(x)| = 1.$)\\
-Observation: Given a finite group $G$ such that $|G| = 1 + 1 + \cdots + 1 + n_1 + \cdots + n_k$ is the class equation, (where $n_i > 1$ for all valid $i$) we know the following: The number of $1$s, say $n,$ is the cardinality of $Z(G).$ Moreover, given any $n_i,$ $n < |G|/n_i < |G|$ and $n \mid |G|/n_i \mid |G|.$ (Each $n_i$ actually represents the cardinality of the \emph{orbit} of some element in $G.$)
+Observation: Given a finite group $G$ such that $|G| = 1 + 1 + \cdots + 1 + n_1 + \cdots + n_k$ is the class equation, (where $n_i > 1$ for all valid $i$) we know the following: The number of $1$s, say $n,$ is the cardinality of $Z(G).$ Moreover, given any $n_i,$ $n < |G|/n_i < |G|$ and $n \mid |G|/n_i \mid |G|.$ (Each $n_i$ actually represents the cardinality of the \emph{orbit} of some element in $G.$)\\
 \textbf{Examples.}
 \begin{enumerate} 
 	\item Find the class equation of $G = S_3.$\\
-	$Z(G) = \{1\}.$ Also, $O_x = \{x, x^2\}.$ That is, $|O(x) = 2|.$\\
+	$Z(G) = \{1\}.$ Also, $O_x = \{x, x^2\}.$ That is, $|O(x)| = 2.$\\
 	The only possibility left for $|O_y|$ is $3.$\\
 	Thus, the class equation is $|G| = 1 + 2 + 3.$
 	\item Find the class equation of $G = D_4.$\\
 	$Z(D_4) = \{1, x^2\}.$\\
 	Thus, $|G| = 1 + 1 + \text{something}.$\\
-	For $x \in G\setminus Z(G),$ we have it that $Z(G) \lneq Z(x) \lneq G.$ As $|Z(G)| = 2$ and $|G| = 8,$ the only possibility is $|Z(x)| = 4$ or $|O(x)| = 2.$ This gives us that the ``something" can only consist of $2$s. As we have $6$ left, we get that $|G| = 1 + 1 + 2 + 2 + 2 + 2.$
+	For $x \in G\setminus Z(G),$ we have it that $Z(G) \lneq Z(x) \lneq G.$ As $|Z(G)| = 2$ and $|G| = 8,$ the only possibility is $|Z(x)| = 4$ or $|O(x)| = 2.$ This gives us that the ``something" can only consist of $2$s. As we have $6$ left, we get that $|G| = 1 + 1 + 2 + 2 + 2.$
 	\item Let $G$ be a group such that $|G| = 10.$ Show that $1 + 1 + 1 + 2 + 5$ cannot be the class equation.\\
 	$Z(G)$ cannot have 3 elements. \hfill $\blacksquare$
 	\item Show that $1 + 1 + 2 + 2 + 2 + 2$ is not possible.\\
-	We are given that $Z(G) = 2$ and $Z(x) = 10/2 = 5$ for some $x \in G.$ But this is a contradiction as $Z(G)$ should divide $Z(x)$ but $2 \nmid 5.$
+	We are given that $|Z(G)| = 2$ and $|Z(x)| = 10/2 = 5$ for some $x \in G.$ But this is a contradiction as $|Z(G)|$ should divide $|Z(x)|$ but $2 \nmid 5.$
 \end{enumerate}
 
 \begin{defn}
@@ -618,14 +618,14 @@ Observation: Given a finite group $G$ such that $|G| = 1 + 1 + \cdots + 1 + n_1 
 \begin{theorem}
 	If $|G| = p^2$ for some prime $p,$ then $G \cong \mathbb{Z}/p^2\mathbb{Z}$ or $G \cong (\mathbb{Z}/p\mathbb{Z})\times (\mathbb{Z}/p\mathbb{Z}).$
 \end{theorem}
-\begin{theorem}
+\begin{proof}
 	$G$ contains an element of order $p^2,$ then $G$ is cyclic and we are done.\\
 	Assume $G$ does not have an element of order $p^2.$ In that case, all elements $(\neq1)$ have order $p.$\\
 	Choose $1 \neq x \in G.$ Choose $y \in G \setminus \langle x\rangle.$\\
 	Then, we have it that $\langle x\rangle \cong \langle y\rangle \cong \mathbb{Z}/p\mathbb{Z}.$ Moreover, $\langle x\rangle \cap \langle y\rangle = (1).$\\
 	As $G$ is abelian, by previous theorem, we also have it that $\langle x\rangle \langle y\rangle = \langle y\rangle\langle x\rangle .$\\
 	Lastly, we also have it that $\langle x\rangle\langle y\rangle = G.$ Thus, $G \cong \langle x\rangle\times\langle y\rangle$ and we are done.
-\end{theorem}
+\end{proof}
 
 \section{Classification Theorems}
 \begin{theorem}[Classification of finite Abelian Groups]
@@ -670,11 +670,11 @@ Facts:
 \begin{theorem}
 	If $n \ge 5,$ then $A_n$ is simple. That is, $A_n$ has no nontrivial normal subgroups.
 \end{theorem}
-\begin{theorem}
+\begin{proof}
 	Let $(1) \neq H \trianglelefteq A_n.$ \\
 	We shall prove the theorem by showing that $H$ contains a $3-$cycles. As $H$ is normal, it must contain all the conjugates (in $A_n$) of this $3-$cycle. By the last fact above, this would then contain all the $3-$cycles. By the second fact, we'll get that $A_n \subset H$ and thus, proving that $H = A_n.$\\
 	Rest is omitted.
-\end{theorem}
+\end{proof}
 $G$ acts on $ S = \pset (G) \setminus \{\emptyset\}$ by conjugation.\\
 $\varphi : G\times S \to S$ such that $(g, A) \overset{\varphi}{\mapsto}gAg^{-1}.$\\
 Let $H' \le G.$ $O_H = $ all conjugate subgroups of $H.$\\
@@ -696,7 +696,7 @@ Thus, $N_G(H) = \langle (12), (34), (13)(24)\rangle \longleftarrow$ check that t
 
 Given $p \in S_n,$ we know that all of its conjugates in $S_n$ are precisely those permutations that have the same cycle type. However, they may not be conjugates in $A_n.$ \\
 Let $p \in S_n.$ We know that $|C_{S_n}(p)| = \dfrac{|S_n|}{|Z_{S_n}(p)|}.$\\
-Similarly, $|C_{A_n}(p)| = \dfrac{|A_n|}{|Z_{A_n}(p)|}.$
+Similarly, $|C_{A_n}(p)| = \dfrac{|A_n|}{|Z_{A_n}(p)|}.$\\~\\
 Case 1. Suppose it is the case that $Z_{S_n}(p)$ does not contain any odd permutation. This means that $|Z_{S_n}(p)| = |Z_{A_n}(p)|$ and thus, $|C_{A_n}(p)| = \dfrac{|A_n|}{|Z_{A_n}(p)|} = \dfrac{\frac{1}{2}|S_n|}{|Z_{S_n}(p)|} = \dfrac{1}{2}|C_{S_n}(p)|.$\\
 Case 2. Suppose it is the case that $Z_{S_n}(p)$ does contains an odd permutation. Let $\sigma$ be any such permutation. Let $H = Z_{S_n}(p) \cap A_n.$ That is, the set of all even permutations in $Z_{S_n}(p).$ Moreover, this is a subgroup.\\
 Let $\tau$ be an odd permutation in $Z_{S_n}(p).$ Note that $Z_{S_n}(p)$ is a subgroup. Thus, $\sigma^{-1}\tau\in Z_{S_n}(p).$ Also, note $\sigma^{-1}\tau$ is an even permutation. Thus, $\sigma^{-1}\tau\in H.$ Or equivalently, $\tau \in \sigma H.$ Thus, we have shown that whenever $\tau$ is an odd permutation in $Z_{S_n}(p),$ it must belong to $\sigma H.$ This shows that $|H| = |Z_{A_n}(p)| = \frac{1}{2}|Z_{S_n}(p)|.$\\
